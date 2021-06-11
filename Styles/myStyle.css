@@ -221,7 +221,7 @@ input[type=text] {
     /* position: absolute; */
     font-size: 13pt;
     /* margin-right: 204px; */
-    width: 450px;
+    width: 560px;
     height: 400px;
     /* max-width: fit-content; */
     margin: 0 auto;
@@ -260,7 +260,7 @@ input[type=text] {
     margin-top: 10px;
     width: fit-content;
     height: fit-content;
-    margin-right: 504px;
+    margin-right: 430px;
 }
 
 button {
@@ -279,6 +279,14 @@ button {
     margin-top: 3%;
     font-size: 18pt;
     margin-bottom: 60px;
+}
+
+#firstBtnDiv {
+    display: inline-block;
+}
+
+#secondBtnDiv {
+    display: inline-block;
 }
 
 #lettetvolFam {
