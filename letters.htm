@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- CSS -->
+    <link href="Styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/myStyle.css" rel="stylesheet" type="text/css" />
+    <!-- Scripts -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script src="jScripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="jScripts/letters.js"></script>
+</head>
+
+<body dir="rtl">
+    <div id="container">
+        <ARTICLE>
+
+            <header>
+                <nav>
+                    <ul>
+
+                        <li>
+                            <h1><a><img src="./pics/TIPS_Logo.png" /></a></h1>
+                        </li>
+                        <li id="profilePic">
+                            <a href="index.html"> <img id="ProfilePicImg" src="pic/profilePic.png" /></a>
+                            <!--<span class="arrow"></span>-->
+                            <ul id="dropDownParent">
+
+                                <li><a href="#">כניסה</a></li>
+                                <li><a href="#">להצטרפות</a></li>
+                                <li><a href="#">הטיפים שאהבתי</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <h1>הפיצו את התודה שלכם!</h1>
+
+            <p>כל מה שנותר זה לבחור את המכתב, למלא את הפרטים ולהפיץ!</p>
+            <div>
+                <div id="eventBTN">
+                    <div id="firstBtnDiv">
+                        <button id="lettetBoss">מכתב לבוס בעבודה</button>
+                        <button id="lettetToVol">מכתב תודה רשמי למתנדב</button>
+                    </div>
+                    <!--<button id="lettetOrgBoss">מכתב למנהל בארגון</button>-->
+                    <div id="secondBtnDiv">
+                        <button id="lettetHoliday">מכתב לחגים</button>
+                        <button id="lettetvolFam">מכתב למשפחת המתנדב</button>
+                    </div>
+                </div>
+
+
+                <div id="displayDiv">
+                    <div>
+                        <form action="/" method="post">
+
+                            <label class="hide" id="familyNameLBL" for="familyName">שם משפחת המתנדב: </label><input class="hide" id="familyName" type="text" placeholder="שם המשפחה" />
+                            <label class="hide" id="toNameLBL" for="toName">למי המכתב: </label><input class="hide" id="toName" type="text" placeholder="למי המכתב?" />
+                            <label class="hide" id="volNameLBL" for="volName">שם המתנדב/ת: </label><input class="hide" id="volName" type="text" placeholder="שם המתנדב/ת" />
+
+                            <label class="hide" id="genderLBL">מין המתנדב/ת: </label>
+
+                            <img class="hide" id="girlIMG" for="girl" src="pics/princess.png" /> <input id="girl" class="hide" name="gender" type="radio" value="1" />
+                            <img class="hide" id="boyIMG" for="boy" src="pics/prince.png" />  <input id="boy" class="hide" name="gender" type="radio" value="2" />
+
+                            <label class="hide" id="volDurationLBL" for="volDuration">משך ההתנדבות: </label><input class="hide" id="volDuration" type="text" placeholder="משך ההתנדבות בארגון" />
+
+                            <label class="hide" id="volGoalLBL" for="volGoal">מטרת פרויקט ההתנדבות: </label><input class="hide" id="volGoal" type="text" placeholder="מטרת פרויקט ההתנדבות" />
+
+
+                            <label class="hide" id="myNameLBL" for="myName">ממני: </label><input class="hide" id="myName" type="text" placeholder="השם שלי" />
+
+                            <label class="hide" id="orgNameLBL" for="orgName">שם ארגון ההתנדבות: </label><input class="hide" id="orgName" type="text" placeholder="שם ארגון ההתנדבות" />
+
+
+                        </form>
+                        <input class="hide BTNstyle" id="createLetter" type="button" value="צור מכתב!" />
+                        <p id="errorNote">אחד או יותר מהשדות חסרים. השלימו ונסו שוב.</p>
+
+                    </div>
+
+                    <div>
+                        <P  id="sideNote">** אתם יכולים לערוך את המכתב לפני ההורדה וגם אחריה</P>
+                        <div id="letterAreaDiv">
+                            <textarea id="letterArea" rows="10" cols="20" placeholder="המכתב יופיע כאן"></textarea>
+                        </div>
+                        <button id="downloadLetter" class="BTNstyle" onclick=saveTextAsFile(letterArea.value,'המכתב_שלך.txt')>
+                            <span>הורד מכתב!</span>
+                        </button>
+                    </div>
+
+
+              
+                </div>
+            </div>
+
+
+
+        </ARTICLE>
+    </div>
+</body>
+
+</html>
